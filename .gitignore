@@ -1,0 +1,5 @@
+# Never committed: real contacts, enriched outputs, run folders, recordings, label keys
+private/
+.venv/
+__pycache__/
+.env

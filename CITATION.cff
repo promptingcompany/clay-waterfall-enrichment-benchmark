@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use these results or this method, please cite it as below."
+type: dataset
+title: "Enrichment Waterfall Benchmark"
+abstract: "Open benchmark of B2B contact enrichment APIs: does a multi-provider waterfall find more verified work emails and working mobiles than a single-provider database? Same 500 contacts, one verifier, ranked by cost per 1,000 verified emails."
+authors:
+  - name: "The Prompting Company"
+    website: "https://promptingcompany.com"
+version: "1.0"
+date-released: "2026-11-18"
+repository-code: "https://github.com/promptingcompany/clay-waterfall-enrichment-benchmark"
+license:
+  - "MIT"
+  - "CC-BY-4.0"
+keywords:
+  - "benchmark"
+  - "data enrichment"
+  - "email verification"
+  - "waterfall enrichment"
+  - "Clay"

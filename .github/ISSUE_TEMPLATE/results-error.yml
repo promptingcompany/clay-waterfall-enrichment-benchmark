@@ -1,0 +1,24 @@
+name: Results or scoring error
+description: Report a number, table or scoring rule you believe is wrong.
+labels: ["results-error"]
+body:
+  - type: input
+    id: where
+    attributes:
+      label: Where
+      description: The RESULTS.md table and row, or the results/summary.csv row and column.
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What you believe is wrong
+    validations:
+      required: true
+  - type: textarea
+    id: how
+    attributes:
+      label: How you checked
+      description: A command you ran, a source URL, or the line of scoring code. Don't include anyone's contact details.
+    validations:
+      required: true

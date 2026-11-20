@@ -1,0 +1,16 @@
+#!/usr/bin/env python3
+"""Run benchkit for this repo. Uses an installed benchkit, or falls back to a ../benchkit checkout."""
+import os
+import sys
+from pathlib import Path
+
+HERE = Path(__file__).resolve().parent
+os.environ.setdefault("BENCH_REPO", str(HERE))
+try:
+    import benchkit  # noqa: F401
+except ImportError:
+    sys.path.insert(0, str(HERE.parent / "benchkit"))
+
+from benchkit.cli import main  # noqa: E402
+
+main()

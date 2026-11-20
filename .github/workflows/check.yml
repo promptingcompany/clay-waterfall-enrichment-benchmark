@@ -1,0 +1,32 @@
+name: check
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+      - name: No secrets in the repository history (gitleaks)
+        run: docker run --rm -v "$PWD:/repo" ghcr.io/gitleaks/gitleaks:v8.30.1@sha256:c00b6bd0aeb3071cbcb79009cb16a60dd9e0a7c60e2be9ab65d25e6bc8abbb7f detect --source /repo --redact --verbose --no-banner
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version-file: .python-version
+      - run: pip install -r requirements.txt
+      - name: Every Python file compiles
+        run: python -m compileall -q -x "/\.git/" .
+      - name: Scorer tests on fixture data
+        run: python -m unittest discover -s tests -v
+      - name: Published numbers match results/summary.csv
+        run: python scripts/check_results.py
+      - name: Published results contain no email addresses
+        run: bench check-anon
+      - name: Only summary, run plan and manifest are published
+        run: |
+          extra=$(ls results | grep -vE '^(summary\.csv|run-plan\.json|manifest\.json)$' || true)
+          test -z "$extra" || { echo "unexpected files in results/: $extra"; exit 1; }
+      - name: No private data committed
+        run: test ! -e private

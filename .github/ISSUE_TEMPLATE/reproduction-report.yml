@@ -1,0 +1,39 @@
+name: Reproduction report
+description: Tell us what happened when you checked our results or re-ran the benchmark, whether or not it matched.
+labels: ["reproduction"]
+body:
+  - type: textarea
+    id: ran
+    attributes:
+      label: What you ran
+      description: The commands, for example scripts/reproduce.sh, or the steps of docs/REPRODUCE.md section B on your own sample.
+    validations:
+      required: true
+  - type: input
+    id: commit
+    attributes:
+      label: Commit
+      description: The commit of this repository you used (git rev-parse HEAD).
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Operating system, Python version and benchkit version. For a re-run, also the run dates and which vendors' plans you used.
+    validations:
+      required: true
+  - type: textarea
+    id: numbers
+    attributes:
+      label: Your numbers
+      description: The script's output, or your results table. Don't include anyone's contact details.
+    validations:
+      required: true
+  - type: textarea
+    id: differences
+    attributes:
+      label: Differences from ours
+      description: What didn't match RESULTS.md or results/summary.csv, and what you think explains it. Write "none" if everything matched.
+    validations:
+      required: true

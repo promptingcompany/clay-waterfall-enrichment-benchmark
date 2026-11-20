@@ -1,0 +1,8 @@
+{
+  "title": "Enrichment Waterfall Benchmark",
+  "description": "Open benchmark of B2B contact enrichment APIs: does a multi-provider waterfall find more verified work emails and working mobiles than a single-provider database? Clay's default waterfall, Clay limited to one provider, and two anonymized single-database providers enrich the same 500 contacts; every returned email and phone is checked by one independent verifier, and each endpoint is compared on verified emails, valid mobiles, company-data accuracy, cost per 1,000 verified emails and latency. This record holds the pre-registered method, the task, the scoring code, the Clay adapters and the aggregate results; the input contacts and raw vendor responses are not published. Code is licensed MIT; documentation and results are licensed CC BY 4.0.",
+  "creators": [{"name": "The Prompting Company"}],
+  "license": "MIT",
+  "upload_type": "dataset",
+  "keywords": ["benchmark", "data enrichment", "email verification", "waterfall enrichment", "contact data", "Clay"]
+}

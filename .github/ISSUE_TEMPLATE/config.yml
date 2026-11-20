@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Security problem or data concern
+    url: https://github.com/promptingcompany/clay-waterfall-enrichment-benchmark/security/advisories/new
+    about: Report privately. Don't open a public issue (see SECURITY.md).

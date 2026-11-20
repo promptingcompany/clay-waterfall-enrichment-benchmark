@@ -1,0 +1,20 @@
+Documentation and results: Creative Commons Attribution 4.0 International (CC BY 4.0)
+
+Copyright (c) 2026 The Prompting Company
+
+The documentation and results in this repository (every .md file, and the
+files in results/ and datasets/public/) are licensed under the Creative
+Commons Attribution 4.0 International License (CC BY 4.0).
+
+You may copy, share and adapt them for any purpose, including commercially,
+as long as you give appropriate credit, link to the licence and say whether
+you changed anything.
+
+Attribution: The Prompting Company, with a link to
+https://github.com/promptingcompany/clay-waterfall-enrichment-benchmark
+
+Licence summary: https://creativecommons.org/licenses/by/4.0/
+Full legal text: https://creativecommons.org/licenses/by/4.0/legalcode
+
+Everything else in this repository is code, licensed under the MIT License
+(see LICENSE at the repository root).
